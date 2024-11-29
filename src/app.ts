@@ -8,6 +8,7 @@ app.get('/', (req, res, next) => {
   const error = createHttpError(401, 'you cant access this route');
   next(error);
 });
+
 app.get('/main', (req, res) => {
   res.json({ message: 'welcome to auth servcice' });
 });
@@ -27,5 +28,4 @@ app.use((err: HttpError, req: Request, res: Response, next: NextFunction) => {
     ],
   });
 });
-
 export default app;
