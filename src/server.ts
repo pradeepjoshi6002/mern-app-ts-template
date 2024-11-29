@@ -1,5 +1,3 @@
-const welcome = (name: string) => {
-  console.log("welcome" + name);
-};
+import { Config } from './config';
 
-welcome("Pradeep");
+console.log(Config.NODE_ENV, Config.PORT);
